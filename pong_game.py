@@ -117,6 +117,18 @@ while run:
 	if paddle2.rect.colliderect(pong.rect):
 		pong.dirnx = -1
 
+	if paddle1.rect.y <= 0:
+		paddle1.rect.y = 0
+
+	if paddle2.rect.y <= 0:
+		paddle2.rect.y = 0
+
+	if paddle1.rect.y >= 425:
+		paddle1.rect.y = 425
+
+	if paddle2.rect.y >= 425:
+		paddle2.rect.y = 425
+
 	redrawWindow()
 	clock.tick(15)
 
