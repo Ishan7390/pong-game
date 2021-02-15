@@ -5,6 +5,7 @@ pygame.init()
 win = pygame.display.set_mode((750,500))
 
 pygame.display.set_caption("Let's Play Pong!")
+clock = pygame.time.Clock()
 
 white_color = (255,255,255)
 black_color = (0,0,0)
@@ -72,7 +73,7 @@ def redrawWindow():
 
 run = True
 while run:
-	pygame.time.delay(100)
+	# pygame.time.delay(100)
 	for event in pygame.event.get():
 		if event.type == pygame.QUIT:
 			run = False
@@ -117,5 +118,6 @@ while run:
 		pong.dirnx = -1
 
 	redrawWindow()
+	clock.tick(15)
 
 pygame.quit()
